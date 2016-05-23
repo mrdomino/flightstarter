@@ -23,16 +23,18 @@ gem 'bcrypt', '~> 3.1.7'
 
 group :development, :test do
   gem 'byebug'
-  gem 'rspec-rails', '3.4.0'
+  gem 'rspec-rails', '~> 3.4.0'
 end
 
 group :test do
-    gem 'capybara', '2.7.0'
+    gem 'capybara', '~> 2.7.0'
     gem 'factory_girl_rails'
 end
 
 group :development do
-  gem 'web-console', '~> 2.0'
+  gem 'web-console'
   gem 'spring'
 end
 
+# Explicitly request the rc of nokogiri for codeship
+gem 'nokogiri', '~> 1.6.8.rc3'
